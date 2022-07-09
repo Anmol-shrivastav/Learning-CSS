@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naming Grid Area</title>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            text-align: center;
+
+            display: grid;
+            grid-template-rows: 15vh 5vh 15vh 45vh 20vh;
+            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-areas: "header header header"         /* layout design */
+                                 "navbar navbar navbar"
+                                 "box1 box2 sidebar"
+                                 "content content sidebar"
+                                 "footer footer footer";            
+        }
+        .header{
+            background-color: red;
+            grid-area: header;      /*name every div */
+        }
+        .navbar{
+            background-color: pink;
+            grid-area: navbar;      /*name every div */
+        }
+        .box1{
+            background-color: blueviolet;
+            grid-area: box1;        /*name every div */
+        }
+        .box2{
+            background-color: orangered;
+            grid-area: box2;        /*name every div */
+        }
+        .sidebar{
+            background-color: skyblue;
+            grid-area: sidebar;     /*name every div */
+        }
+        .content{
+            background-color: rgb(24, 109, 167);
+            grid-area: content;     /*name every div */
+        }
+        .footer{
+            background-color: orange;
+            grid-area: footer;      /*name every div */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="navbar">Navbar</div>
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

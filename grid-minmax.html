@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minmax</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: fit-content;
+            margin: 0 auto;
+            background-color: bisque;
+
+            display: grid;
+
+            grid-template-rows: repeat(2, minmax(150px, min-content));
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item1{
+            background-color: aqua;
+        }
+        .item2{
+            background-color: lightgoldenrodyellow;
+        }
+        .item3{
+            background-color: darkorange;
+        }
+        .item4{
+            background-color: lightgreen;
+        }
+        .item5{
+            background-color: darkblue;
+        }
+        .item6{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">one</div>
+        <div class="item2">two</div>
+        <div class="item3">three Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusantium vitae eligendi nam placeat rem, voluptatibus, distinctio excepturi, iure aut earum! Est quisquam sequi numquam ut? Minima quia minus labore.</div>
+        <div class="item4">four</div>
+        <div class="item5">five</div>
+        <div class="item6">six</div>
+    </div>
+</body>
+</html>

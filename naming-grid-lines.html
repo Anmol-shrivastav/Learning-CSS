@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            text-align: center;
+
+            display: grid;
+            grid-template-rows: [header-start] 15vh [header-end navbar-start] 5vh [navbar-end box-start] 15vh [box-end content-start] 45vh [content-end footer-start] 20vh [footer-end];
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+        }
+        .header{
+            background-color: red;
+            grid-row: header-start / header-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+        .navbar{
+            background-color: pink;
+            grid-row: navbar-start / navbar-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+        .box1{
+            background-color: blueviolet;
+            grid-row: box-start / box-end;
+            grid-column: col-start 1 / col-end 1;
+        }
+        .box2{
+            background-color: orangered;
+            grid-row: box-start / box-end;
+            grid-column: col-start 2 / col-end 2;
+        }
+        .sidebar{
+            background-color: skyblue;
+            grid-row: box-start / content-end;
+            grid-column: col-start 3 / col-end 3;
+        }
+        .content{
+            background-color: rgb(24, 109, 167);
+            grid-row: content-start / content-end;
+            grid-column: col-start 1 / col-end 2;
+        }
+        .footer{
+            background-color: orange;
+            grid-row: footer-start / footer-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="navbar">Navbar</div>
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

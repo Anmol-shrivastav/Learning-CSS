@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            padding: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <ul id="allList">
+            <li>one</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+            <li>Six</li>
+            <li>Seven</li>
+            <li>Eight</li>
+            <li>Nine</li>
+            <li>Ten</li>
+        </ul>
+    </div>
+
+    <script>
+        let url = [1,2,3,4,5];
+
+        let sumOfEvenNum = url.filter((num)=>{
+            return num % 2 == 0;
+        }).reduce((sum, curr)=>{
+            return curr + sum; 
+        });
+
+        console.log(sumOfEvenNum);
+
+        let max = url.reduce((sum, curr)=>{
+            return curr % 2 == 0 ? sum + curr : sum;
+        });
+
+        console.log(max);
+
+
+        let ul = document.querySelector("#allList");
+        let listItems = ul.children;
+
+        function deleteList(e){
+            e.currentTarget.remove();
+        }
+
+        for(let i=0; i<listItems.length; i++){
+            listItems[i].addEventListener("click", deleteList);
+        }
+
+
+    </script>
+</body>
+</html>
